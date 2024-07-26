@@ -19,7 +19,7 @@ class HttpHandler(BaseHTTPRequestHandler):
                 self.send_static()
             else:
                 self.send_html_file('error.html', 404)
-       
+
     def do_POST(self):
         data = self.rfile.read(int(self.headers['Content-Length']))
         data_parse = urllib.parse.unquote_plus(data.decode())
