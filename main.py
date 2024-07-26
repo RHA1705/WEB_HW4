@@ -89,7 +89,7 @@ def message_dict(data_parse):
 
 
 def save_storage(data_dict):
-     with open('storage/data.json', 'r+') as f:
+    with open('storage/data.json', 'r+') as f:
         storage_json = json.load(f)
         storage_json.update(data_dict)
         f.seek(0)
